@@ -1,1 +1,1 @@
-# PO-gr1-AleksandraLakiert
+ola lakiert - programowanie obiektowe
