@@ -53,19 +53,20 @@ public class Main {
 
 
 
-//    public static int ileParzystych(int tab){
-//
-//        int parzyste=0;
-//
-//        for(int i=0; i<n; i++) {
-//
-//            if(tab[i]%2==0) parzyste +=1;
-//
-//        }
-//        return parzyste;
-//        System.out.println(" ");
-//
-//    }  // ileParzystych
+    public static int ileParzystych(int tab[]){
+
+        int parzyste=0;
+
+        for(int i=0; i<tab.length; i++) {
+
+            if(tab[i]%2==0) parzyste +=1;
+
+        }
+        System.out.println(" ");
+        return parzyste;
+
+
+    }  // ileParzystych
 
 
 
@@ -81,6 +82,7 @@ public class Main {
 
         generuj(tab,n,minWartosc,maxWartosc);
         System.out.println("ilosc nieparzystych: " + ileNieparzystych(tab));
+        System.out.println("ilosc parzystych: " + ileParzystych(tab));
 
 
 
