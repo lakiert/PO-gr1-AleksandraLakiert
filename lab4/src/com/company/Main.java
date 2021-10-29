@@ -1,5 +1,6 @@
-package com.company;
+package pl.edu.uwm.wmii.alakiert.laboratorium00;
 import java.lang.StringBuffer;
+import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -69,30 +70,114 @@ public class Main {
     }
 
 
+        // d)
+
+    public static String repeat(String str,int n){
+
+        StringBuffer result = new StringBuffer();
+        String result2;
+        for(int i=0; i<n; i++)
+        {
+            result.append(str);
+        }
+
+        result2 = result.toString();
+        return result2;
+    }
+
+
+
+    // e)
+
+    public static int[] where(String str,String subStr){
+
+
+        char[] str_ = str.toCharArray();
+        char[] substr_ = subStr.toCharArray();
+        int[] tab = new int[str_.length];
+        int licznik =0;
+        int number =0;
+
+
+        for(int i=0; i<str_.length; i++)
+        {
+            if(str_[i] == substr_[0])
+            {
+                for(int j=0; j<substr_.length; j++)
+                {
+
+                    if(str_[j+i] == substr_[j]) licznik += 1;
+
+                }
+                if(licznik == substr_.length) tab[number] = i;
+                number += 1;
+                licznik = 0;
+            }
+        }
+
+        int[] tab2 = new int[number];
+        for(int i=0; i<number; i++)
+        {
+            tab2[i] = tab[i];
+        }
+
+        return tab2;
+    }
+
+
 
     public static void main(String[] args) {
 
-
+        Scanner in = new Scanner(System.in);
 
         // zad 1
 
         // a)
-        System.out.println(countChar("Aleksandra", 'a'));
-        System.out.println(countChar("ooooo", 'o'));
 
-        System.out.println(" ");
+//        System.out.println(countChar("Aleksandra", 'a'));
+//        System.out.println(countChar("ooooo", 'o'));
+//        System.out.println(" ");
+
+
 
         // b)
-        System.out.println(countSubStr("tak tak tak","tak" ));
-        System.out.println(countSubStr("helloblablablahellobla", "bla"));
 
-        System.out.println(" ");
+//        System.out.println(countSubStr("tak tak tak","tak" ));
+//        System.out.println(countSubStr("helloblablablahellobla", "bla"));
+//        System.out.println(" ");
+
+
 
         // c)
-        Scanner in = new Scanner(System.in);
-        System.out.println("podaj slowo: ");
-        String zadanie_c = in.nextLine();
-        System.out.println(middle(zadanie_c));
+
+//        System.out.println("podaj slowo: ");
+//        String zadanie_c = in.nextLine();
+//        System.out.println(middle(zadanie_c));
+
+
+
+        // d)
+
+//        System.out.println("podaj slowo: ");
+//        String zadanie_d = in.nextLine();
+//        System.out.println("podaj ilosc powtorzen: ");
+//        int zadanie_d_2 = in.nextInt();
+//        System.out.println(repeat(zadanie_d,zadanie_d_2));
+
+
+
+        // e)
+
+        int[] zad_e = where("oooblaoooblaooobla","bla");
+        System.out.println("substring wystepuje na tych indexach: ");
+        for(int i=0; i<zad_e.length; i++)
+        {
+            System.out.println(zad_e[i]);
+        }
+
+
+
+
 
 
     }
