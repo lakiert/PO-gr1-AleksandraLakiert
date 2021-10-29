@@ -126,6 +126,31 @@ public class Main {
 
 
 
+
+    // f)
+
+    public static String change(String str){
+
+        StringBuffer newstr = new StringBuffer();
+        newstr.append(str);
+        for(int i=0; i<str.length(); i++)
+        {
+            if(Character.isLowerCase(str.charAt(i))) newstr.setCharAt(i,Character.toUpperCase(str.charAt(i)));
+
+            else if(Character.isUpperCase(str.charAt(i))) newstr.setCharAt(i,Character.toLowerCase(str.charAt(i)));
+
+        }
+
+        String wynik = newstr.toString();
+
+        return wynik;
+
+    }
+
+
+
+
+
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
@@ -168,14 +193,19 @@ public class Main {
 
         // e)
 
-        int[] zad_e = where("oooblaoooblaooobla","bla");
-        System.out.println("substring wystepuje na tych indexach: ");
-        for(int i=0; i<zad_e.length; i++)
-        {
-            System.out.println(zad_e[i]);
-        }
+//        int[] zad_e = where("oooblaoooblaooobla","bla");
+//        System.out.println("substring wystepuje na tych indexach: ");
+//        for(int i=0; i<zad_e.length; i++)
+//        {
+//            System.out.println(zad_e[i]);
+//        }
 
 
+
+        // f)
+
+//        System.out.println(change("Hello World"));
+//        System.out.println(change("AAAaaa.!!!"));
 
 
 
