@@ -188,6 +188,46 @@ public class Main {
 
 
 
+    // zad 3
+
+    public static int ile_v2(String plik, String wyraz) throws Exception{
+
+        int licznik =0;
+        try
+        {
+
+            FileReader fr = new FileReader(plik);
+            StringBuilder tresc = new StringBuilder();
+            int i;
+            while((i=fr.read())!=-1)
+            {
+                tresc.append((char)i);
+            }
+
+            fr.close();
+            System.out.println(tresc);
+            String[] lista = tresc.toString().split(" ");
+
+            for(int j=0; j<lista.length; j++)
+            {
+                if(lista[j].equals(wyraz)) licznik++;
+            }
+
+
+        }
+        catch (FileNotFoundException ex)
+        {
+            System.out.println("file not found");
+        }
+
+        return licznik;
+
+
+    }
+
+
+
+
     public static void main(String[] args)  throws Exception  {
 
         Scanner in = new Scanner(System.in);
@@ -253,6 +293,14 @@ public class Main {
 
 //        int ilosc = ile("dokument.txt", 'a');
 //        System.out.println("znak pojaiwa sie " + ilosc + " razy");
+
+
+
+        // zad 3
+
+//        int ilosc = ile_v2("dokument2.txt", "tak");
+//        System.out.println("wyraz pojaiwa sie " + ilosc + " razy");
+
 
 
     }
