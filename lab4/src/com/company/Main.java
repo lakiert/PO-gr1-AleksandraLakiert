@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.io.*;
 import java.io.FileReader;
+import java.math.BigInteger;
+import java.math.BigDecimal;
 
 
 public class Main {
@@ -152,7 +154,7 @@ public class Main {
     }
 
 
-
+// ---------------------------------------------------------
 
 
     // zad 2
@@ -227,6 +229,30 @@ public class Main {
 
 
 
+// ---------------------------------------------------------
+
+
+
+    // zad 4
+
+    public static BigInteger szachownica(int n){
+
+        BigInteger a = new BigInteger("2");
+        BigInteger suma = new BigInteger("0");
+        BigInteger result = new BigInteger("0");
+
+        for(int i=0; i<(n*n); i++)
+        {
+            result = a.pow(i);
+            suma = suma.add(result);
+
+        }
+
+        return suma;
+
+    }
+
+
 
     public static void main(String[] args)  throws Exception  {
 
@@ -287,6 +313,8 @@ public class Main {
 
 
 
+// ---------------------------------------------------------
+
 
 
         // zad 2
@@ -300,6 +328,20 @@ public class Main {
 
 //        int ilosc = ile_v2("dokument2.txt", "tak");
 //        System.out.println("wyraz pojaiwa sie " + ilosc + " razy");
+
+
+
+
+
+// ---------------------------------------------------------
+
+
+        // zad 4
+
+//        System.out.println(szachownica(3));
+//        System.out.println(szachownica(2));
+//        System.out.println(szachownica(5));
+
 
 
 
