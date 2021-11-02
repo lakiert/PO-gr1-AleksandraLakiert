@@ -254,6 +254,30 @@ public class Main {
 
 
 
+
+
+    // zad 5
+
+    public static BigDecimal kapital(double k, double p, int n){
+
+
+        BigDecimal wynik = new BigDecimal("0");
+        wynik = wynik.add(BigDecimal.valueOf(k));
+
+        for(int i=1; i<=n; i++)
+        {
+
+            wynik = wynik.add(wynik.multiply(BigDecimal.valueOf(p)));
+
+        }
+
+    return wynik;
+
+    }
+
+
+
+
     public static void main(String[] args)  throws Exception  {
 
         Scanner in = new Scanner(System.in);
@@ -343,6 +367,10 @@ public class Main {
 //        System.out.println(szachownica(5));
 
 
+
+        // zad 5
+//        System.out.println(kapital(100,0.05,5));
+//        System.out.println(kapital(1000,0.005,20));
 
 
     }
