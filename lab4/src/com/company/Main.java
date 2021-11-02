@@ -2,6 +2,8 @@ package pl.edu.uwm.wmii.alakiert.laboratorium00;
 import java.lang.StringBuffer;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.io.*;
+import java.io.FileReader;
 
 
 public class Main {
@@ -143,6 +145,8 @@ public class Main {
 
         String wynik = newstr.toString();
 
+
+
         return wynik;
 
     }
@@ -151,7 +155,40 @@ public class Main {
 
 
 
-    public static void main(String[] args) {
+    // zad 2
+
+    public static int ile(String plik, char znak) throws Exception{
+
+        int licznik =0;
+        try
+        {
+
+            FileReader fr = new FileReader(plik);
+            StringBuilder tresc = new StringBuilder();
+            int i;
+            while((i=fr.read())!=-1)
+            {
+                tresc.append((char)i);
+                if((char)i == znak) licznik ++;
+            }
+
+            fr.close();
+            System.out.println(tresc);
+
+        }
+        catch (FileNotFoundException ex)
+        {
+            System.out.println("file not found");
+        }
+
+    return licznik;
+
+
+    }
+
+
+
+    public static void main(String[] args)  throws Exception  {
 
         Scanner in = new Scanner(System.in);
 
@@ -208,6 +245,14 @@ public class Main {
 //        System.out.println(change("AAAaaa.!!!"));
 
 
+
+
+
+
+        // zad 2
+
+//        int ilosc = ile("dokument.txt", 'a');
+//        System.out.println("znak pojaiwa sie " + ilosc + " razy");
 
 
     }
