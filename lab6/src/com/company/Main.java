@@ -70,6 +70,93 @@ public class Main {
 
 
 
+
+    // zad3
+
+    public static ArrayList<Integer> mergeSorted(ArrayList<Integer> a, ArrayList<Integer> b)
+    {
+
+        int dlugosc = a.size()+b.size();
+        ArrayList<Integer> nowy = new ArrayList<Integer>(dlugosc);
+
+        for(int i=0; i<a.size(); i++)
+        {
+            for(int j=i+1; j<a.size(); j++)
+            {
+                int small = a.get(i);
+                if (a.get(j) < small)
+                {
+                    a.set(i,a.get(j));
+                    a.set(j,small);
+                }
+            }
+        }
+        System.out.println(a);
+        for(int i=0; i<b.size(); i++)
+        {
+            for(int j=i+1; j<b.size(); j++)
+            {
+                int small = b.get(i);
+                if (b.get(j) < small)
+                {
+                    b.set(i,b.get(j));
+                    b.set(j,small);
+                }
+            }
+        }
+        System.out.println(b);
+
+
+
+        int i = 0;
+        while((a.size() > i) && (b.size() > i))
+        {
+
+            if(a.get(i)<b.get(i))
+            {
+                nowy.add(a.get(i));
+                nowy.add(b.get(i));
+            }
+            else
+            {
+                nowy.add(b.get(i));
+                nowy.add(a.get(i));
+            }
+
+            i++;
+
+        }
+        if(a.size()>i)
+        {
+
+            while(a.size() > i)
+            {
+                nowy.add(a.get(i));
+                i++;
+            }
+
+        }
+        else if(b.size()>i)
+        {
+
+            while(b.size() > i)
+            {
+                nowy.add(b.get(i));
+                i++;
+            }
+
+        }
+        else
+        {
+            return nowy;
+        }
+
+
+        return nowy;
+    }
+
+
+
     public static void main(String[] args) {
 
 
@@ -97,7 +184,7 @@ public class Main {
 
 
 
-        
+
 
         // zad2
 
@@ -123,6 +210,27 @@ public class Main {
 //    System.out.println(merge(a,b));
 
 
+
+        // zad3
+
+        ArrayList<Integer> a = new ArrayList<Integer>();
+        ArrayList<Integer> b = new ArrayList<Integer>();
+
+        a.add(1);
+        a.add(4);
+        a.add(9);
+        a.add(16);
+
+        b.add(9);
+        b.add(7);
+        b.add(4);
+        b.add(9);
+        b.add(11);
+
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(" ");
+        System.out.println(mergeSorted(a,b));
 
 
     }
