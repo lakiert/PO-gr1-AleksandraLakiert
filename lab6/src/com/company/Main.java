@@ -157,6 +157,50 @@ public class Main {
 
 
 
+
+    // zad4
+
+    public static ArrayList<Integer> reversed(ArrayList<Integer> a)
+    {
+
+        ArrayList<Integer> nowy = new ArrayList<Integer>(a.size());
+        nowy.addAll(a);
+
+        for(int i=0; i<a.size(); i++)
+        {
+            for(int j=i+1; j<a.size(); j++)
+            {
+                int temp = nowy.get(i);
+                nowy.set(i,nowy.get(j));
+                nowy.set(j,temp);
+
+            }
+        }
+
+        return nowy;
+    }
+
+
+
+    // zad5
+
+    public static void reverse(ArrayList<Integer> a)
+    {
+
+        for(int i=0; i<a.size(); i++)
+        {
+            for(int j=i+1; j<a.size(); j++)
+            {
+                int temp = a.get(i);
+                a.set(i,a.get(j));
+                a.set(j,temp);
+
+            }
+        }
+
+    }
+
+
     public static void main(String[] args) {
 
 
@@ -213,24 +257,58 @@ public class Main {
 
         // zad3
 
-        ArrayList<Integer> a = new ArrayList<Integer>();
-        ArrayList<Integer> b = new ArrayList<Integer>();
+//    ArrayList<Integer> a = new ArrayList<Integer>();
+//    ArrayList<Integer> b = new ArrayList<Integer>();
+//
+//    a.add(1);
+//    a.add(4);
+//    a.add(9);
+//    a.add(16);
+//
+//    b.add(9);
+//    b.add(7);
+//    b.add(4);
+//    b.add(9);
+//    b.add(11);
+//
+//    System.out.println(a);
+//    System.out.println(b);
+//    System.out.println(" ");
+//    System.out.println(mergeSorted(a,b));
 
-        a.add(1);
-        a.add(4);
-        a.add(9);
-        a.add(16);
 
-        b.add(9);
-        b.add(7);
-        b.add(4);
-        b.add(9);
-        b.add(11);
 
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(" ");
-        System.out.println(mergeSorted(a,b));
+
+        // zad4
+
+//    ArrayList<Integer> a = new ArrayList<Integer>();
+//
+//    a.add(5);
+//    a.add(4);
+//    a.add(3);
+//    a.add(2);
+//    a.add(1);
+//
+//    System.out.println(a);
+//    ArrayList<Integer> nowa_lista = reversed(a);
+//    System.out.println(nowa_lista);
+
+
+
+
+        // zad5
+
+//    ArrayList<Integer> a = new ArrayList<Integer>();
+//
+//    a.add(5);
+//    a.add(4);
+//    a.add(3);
+//    a.add(2);
+//    a.add(1);
+//
+//    System.out.println(a);
+//    reverse(a);
+//    System.out.println(a);
 
 
     }
