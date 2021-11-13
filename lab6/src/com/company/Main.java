@@ -24,12 +24,49 @@ public class Main {
 
     // zad2
 
-//    ArrayList<Integer> merge(ArrayList<Integer> a, ArrayList<Integer> b)
-//    {
-//
-//
-//
-//    }
+    public static ArrayList<Integer> merge(ArrayList<Integer> a, ArrayList<Integer> b)
+    {
+
+        int dlugosc = a.size()+b.size();
+        ArrayList<Integer> nowy = new ArrayList<Integer>(dlugosc);
+
+
+        int i = 0;
+        while((a.size() > i) && (b.size() > i))
+        {
+            nowy.add(a.get(i));
+            nowy.add(b.get(i));
+            i++;
+        }
+        if(a.size()>i)
+        {
+
+            while(a.size() > i)
+            {
+                nowy.add(a.get(i));
+                i++;
+            }
+
+        }
+        else if(b.size()>i)
+        {
+
+            while(b.size() > i)
+            {
+                nowy.add(b.get(i));
+                i++;
+            }
+
+        }
+        else
+        {
+            return nowy;
+        }
+
+
+        return nowy;
+
+    }
 
 
 
@@ -60,11 +97,30 @@ public class Main {
 
 
 
+        
 
         // zad2
 
-
-
+//    ArrayList<Integer> a = new ArrayList<Integer>();
+//    ArrayList<Integer> b = new ArrayList<Integer>();
+//
+//    a.add(1);
+//    a.add(1);
+//    a.add(1);
+//    a.add(1);
+//
+//
+//    b.add(0);
+//    b.add(0);
+//    b.add(0);
+//    b.add(0);
+//    b.add(0);
+//    b.add(0);
+//    b.add(0);
+//
+//    System.out.println(a);
+//    System.out.println(b);
+//    System.out.println(merge(a,b));
 
 
 
