@@ -50,10 +50,6 @@ class TaskList{
         return task_list.size();
     }
 
-    public void poll(){
-        task_list.poll();
-    }
-
     public void what_now(){
         System.out.println(task_list.peek());
     }
